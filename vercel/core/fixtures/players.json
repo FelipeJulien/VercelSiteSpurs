@@ -1,0 +1,230 @@
+[
+    {
+        "model": "core.player",
+        "pk": 1,
+        "fields": {
+            "name": "Victor Wembanyama",
+            "number": 1,
+            "position": "PF/C",
+            "position_full": "Center / Power Forward",
+            "height": "2,26 m",
+            "experience": "2Y",
+            "photo": "",
+            "photo_url": "https://cdn.nba.com/headshots/nba/latest/1040x760/1641705.png",
+            "is_active": true,
+            "is_legend": false,
+            "legend_years": "",
+            "legend_achievements": "",
+            "created_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "core.player",
+        "pk": 2,
+        "fields": {
+            "name": "Devin Vassell",
+            "number": 24,
+            "position": "SG",
+            "position_full": "Shooting Guard",
+            "height": "1,96 m",
+            "experience": "5Y",
+            "photo": "",
+            "photo_url": "https://cdn.nba.com/headshots/nba/latest/1040x760/1630170.png",
+            "is_active": true,
+            "is_legend": false,
+            "legend_years": "",
+            "legend_achievements": "",
+            "created_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "core.player",
+        "pk": 3,
+        "fields": {
+            "name": "Dylan Harper",
+            "number": 2,
+            "position": "PG",
+            "position_full": "Point Guard",
+            "height": "1,96 m",
+            "experience": "Rookie",
+            "photo": "",
+            "photo_url": "https://cdn.nba.com/headshots/nba/latest/1040x760/1642844.png",
+            "is_active": true,
+            "is_legend": false,
+            "legend_years": "",
+            "legend_achievements": "",
+            "created_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "core.player",
+        "pk": 4,
+        "fields": {
+            "name": "Keldon Johnson",
+            "number": 3,
+            "position": "SF",
+            "position_full": "Small Forward",
+            "height": "1,98 m",
+            "experience": "7Y",
+            "photo": "",
+            "photo_url": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629640.png",
+            "is_active": true,
+            "is_legend": false,
+            "legend_years": "",
+            "legend_achievements": "",
+            "created_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "core.player",
+        "pk": 5,
+        "fields": {
+            "name": "Stephon Castle",
+            "number": 5,
+            "position": "SG",
+            "position_full": "Shooting Guard",
+            "height": "1,98 m",
+            "experience": "2Y",
+            "photo": "",
+            "photo_url": "https://cdn.nba.com/headshots/nba/latest/1040x760/1642264.png",
+            "is_active": true,
+            "is_legend": false,
+            "legend_years": "",
+            "legend_achievements": "",
+            "created_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "core.player",
+        "pk": 6,
+        "fields": {
+            "name": "Julian Champagnie",
+            "number": 30,
+            "position": "PF",
+            "position_full": "Power Forward",
+            "height": "2,01 m",
+            "experience": "4Y",
+            "photo": "",
+            "photo_url": "https://cdn.nba.com/headshots/nba/latest/1040x760/1630577.png",
+            "is_active": true,
+            "is_legend": false,
+            "legend_years": "",
+            "legend_achievements": "",
+            "created_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "core.player",
+        "pk": 7,
+        "fields": {
+            "name": "De'Aaron Fox",
+            "number": 9,
+            "position": "PG",
+            "position_full": "Point Guard",
+            "height": "1,91 m",
+            "experience": "9Y",
+            "photo": "",
+            "photo_url": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628368.png",
+            "is_active": true,
+            "is_legend": false,
+            "legend_years": "",
+            "legend_achievements": "",
+            "created_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "core.player",
+        "pk": 8,
+        "fields": {
+            "name": "Luke Kornet",
+            "number": 7,
+            "position": "C",
+            "position_full": "Center",
+            "height": "2,16 m",
+            "experience": "9Y",
+            "photo": "",
+            "photo_url": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628436.png",
+            "is_active": true,
+            "is_legend": false,
+            "legend_years": "",
+            "legend_achievements": "",
+            "created_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "core.player",
+        "pk": 9,
+        "fields": {
+            "name": "Tim Duncan",
+            "number": 21,
+            "position": "PF/C",
+            "position_full": "Power Forward / Center",
+            "height": "2,11 m",
+            "experience": "19Y",
+            "photo": "",
+            "photo_url": "https://cdn.nba.com/headshots/nba/latest/1040x760/1495.png",
+            "is_active": false,
+            "is_legend": true,
+            "legend_years": "1997 – 2016",
+            "legend_achievements": "5x Campeão NBA (1999, 2003, 2005, 2007, 2014) • 3x MVP das Finals • 2x MVP da Temporada Regular • 15x All-Star • Inducted no Hall da Fama em 2020 • Nunca jogou por outra franquia",
+            "created_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "core.player",
+        "pk": 10,
+        "fields": {
+            "name": "Tony Parker",
+            "number": 9,
+            "position": "PG",
+            "position_full": "Point Guard",
+            "height": "1,88 m",
+            "experience": "18Y",
+            "photo": "",
+            "photo_url": "https://cdn.nba.com/headshots/nba/latest/1040x760/2225.png",
+            "is_active": false,
+            "is_legend": true,
+            "legend_years": "2001 – 2019",
+            "legend_achievements": "4x Campeão NBA (2003, 2005, 2007, 2014) • 1x MVP das Finals (2007) — primeiro europeu a conquistar o prêmio • 6x All-Star • Hall da Fama em 2023",
+            "created_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "core.player",
+        "pk": 11,
+        "fields": {
+            "name": "Manu Ginóbili",
+            "number": 20,
+            "position": "SG",
+            "position_full": "Shooting Guard",
+            "height": "1,98 m",
+            "experience": "16Y",
+            "photo": "",
+            "photo_url": "https://cdn.nba.com/headshots/nba/latest/1040x760/1938.png",
+            "is_active": false,
+            "is_legend": true,
+            "legend_years": "2002 – 2018",
+            "legend_achievements": "4x Campeão NBA • 1x Prêmio Sexto Homem do Ano • 2x All-Star • Campeão Olímpico com Argentina (2004) • Hall da Fama em 2022 • Escolhido na 57ª posição do draft",
+            "created_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "core.player",
+        "pk": 12,
+        "fields": {
+            "name": "David Robinson",
+            "number": 50,
+            "position": "C",
+            "position_full": "Center",
+            "height": "2,16 m",
+            "experience": "14Y",
+            "photo": "",
+            "photo_url": "https://cdn.nba.com/headshots/nba/latest/1040x760/764.png",
+            "is_active": false,
+            "is_legend": true,
+            "legend_years": "1989 – 2003",
+            "legend_achievements": "2x Campeão NBA (1999, 2003) • 1x MVP da Temporada (1995) • 10x All-Star • Defensor do Ano (1992) • Hall da Fama em 2009 • Serviu 2 anos na Marinha dos EUA antes de estrear na NBA",
+            "created_at": "2024-01-01T00:00:00Z"
+        }
+    }
+]

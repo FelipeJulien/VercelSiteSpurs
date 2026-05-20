@@ -1,0 +1,49 @@
+{% load static %}
+<footer class="bg-black border-t-4 border-spurs-silver mt-auto">
+    <div class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <div class="flex items-center gap-3 mb-4">
+                    <img src="{% static 'images/san-antonio-spurs-seeklogo.png' %}" 
+                         alt="San Antonio Spurs Logo" 
+                         class="h-10 w-auto">
+                    <span class="text-xl font-bold text-white">
+                        SAN ANTONIO <span class="text-spurs-silver">SPURS</span>
+                    </span>
+                </div>
+                <p class="text-gray-400 text-sm">
+                    Projeto acadêmico para a disciplina de Programação Web.
+                    Este site não é afiliado oficialmente à NBA.
+                </p>
+            </div>
+            
+            <div>
+                <h3 class="text-spurs-silver font-bold mb-4 text-lg">Links Rápidos</h3>
+                <ul class="space-y-2">
+                    <li><a href="{% url 'home' %}" class="text-gray-400 hover:text-white transition-colors">Início</a></li>
+                    <li><a href="{% url 'roster' %}" class="text-gray-400 hover:text-white transition-colors">Elenco</a></li>
+                    <li><a href="{% url 'history' %}" class="text-gray-400 hover:text-white transition-colors">História</a></li>
+                    <li><a href="{% url 'arena' %}" class="text-gray-400 hover:text-white transition-colors">Arena</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="text-spurs-silver font-bold mb-4 text-lg">Sobre o Projeto</h3>
+                <p class="text-gray-400 text-sm">
+                    Desenvolvido com Django Framework e Tailwind CSS.
+                    Uma homenagem ao time de basquete mais consistente da NBA.
+                </p>
+                <div class="mt-4 flex gap-4">
+                    <span class="bg-spurs-navy text-white px-3 py-1 rounded text-sm font-semibold">Django</span>
+                    <span class="bg-spurs-gray text-white px-3 py-1 rounded text-sm font-semibold">Tailwind</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+            <p class="text-gray-500 text-sm">
+                © 2026 San Antonio Spurs Fan Site. Todos os direitos reservados.
+            </p>
+        </div>
+    </div>
+</footer>

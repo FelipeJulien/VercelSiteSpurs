@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Entrar — San Antonio Spurs{% endblock %}
+
+{% block content %}
+<section class="min-h-[80vh] flex items-center justify-center px-4 py-12">
+    <div class="w-full max-w-md">
+
+        {# ── Card principal ─────────────────────────────────────────────────── #}
+        <div class="bg-gray-800 border border-gray-700 rounded-2xl shadow-2xl overflow-hidden">
+
+            {# Cabeçalho do card #}
+            <div class="bg-black px-8 py-6 border-b-4 border-spurs-silver text-center">
+                <img src="{% static 'images/san-antonio-spurs-seeklogo.png' %}"
+                     alt="Spurs Logo"
+                     class="h-14 w-auto mx-auto mb-3">
+                <h1 class="text-2xl font-bold text-white tracking-wider">ACESSO AO SISTEMA</h1>
+                <p class="text-spurs-silver text-sm mt-1">Faça login com suas credenciais</p>
+            </div>
+
+            {# Corpo do formulário #}
+            <div class="px-8 py-8">
+
+                {# Exibe erros gerais do formulário (usuário/senha inválidos) #}
+                {% if form.errors %}
+                <div class="bg-red-900/50 border border-red-500 rounded-lg px-4 py-3 mb-6 flex items-start gap-3">
+                    <i class="fas fa-exclamation-triangle text-red-400 mt-0.5 flex-shrink-0"></i>
+                    <div class="text-red-300 text-sm">
+                        <p class="font-semibold">Credenciais inválidas.</p>
+                        <p>Verifique seu usuário e senha e tente novamente.</p>
+                    </div>
+                </div>
+                {% endif %}
+
+                {# Mensagem de redirecionamento (ex: veio de @login_required) #}
+                {% if next %}
+                <div class="bg-yellow-900/40 border border-yellow-600 rounded-lg px-4 py-3 mb-6 flex items-start gap-3">
+                    <i class="fas fa-lock text-yellow-400 mt-0.5 flex-shrink-0"></i>
+                    <p class="text-yellow-200 text-sm">
+                        Você precisa estar autenticado para acessar essa página.
+                    </p>
+                </div>
+                {% endif %}
+
+                <form method="post" action="{% url 'login' %}" id="form-login">
+                    {% csrf_token %}
+
+                    {# Campo: Username #}
+                    <div class="mb-5">
+                        <label for="id_username" class="block text-spurs-silver text-sm font-semibold mb-2">
+                            <i class="fas fa-user mr-2"></i>Usuário
+                        </label>
+                        <input type="text"
+                               id="id_username"
+                               name="username"
+                               autofocus
+                               autocomplete="username"
+                               required
+                               placeholder="Seu nome de usuário"
+                               class="w-full bg-gray-900 border border-gray-600 text-white rounded-lg px-4 py-3 focus:outline-none focus:border-spurs-silver focus:ring-1 focus:ring-spurs-silver transition-colors placeholder-gray-500">
+                    </div>
+
+                    {# Campo: Password #}
+                    <div class="mb-6">
+                        <label for="id_password" class="block text-spurs-silver text-sm font-semibold mb-2">
+                            <i class="fas fa-lock mr-2"></i>Senha
+                        </label>
+                        <input type="password"
+                               id="id_password"
+                               name="password"
+                               autocomplete="current-password"
+                               required
+                               placeholder="Sua senha"
+                               class="w-full bg-gray-900 border border-gray-600 text-white rounded-lg px-4 py-3 focus:outline-none focus:border-spurs-silver focus:ring-1 focus:ring-spurs-silver transition-colors placeholder-gray-500">
+                    </div>
+
+                    {# Campo hidden 'next' para redirecionar após login #}
+                    <input type="hidden" name="next" value="{{ next }}">
+
+                    {# Botão de submit #}
+                    <button type="submit"
+                            id="btn-submit-login"
+                            class="w-full bg-spurs-silver text-black font-bold py-3 rounded-lg hover:bg-white transition-colors text-lg tracking-wide">
+                        <i class="fas fa-sign-in-alt mr-2"></i>Entrar
+                    </button>
+                </form>
+
+                {# Link para recuperação de senha #}
+                <div class="mt-6 text-center">
+                    <a href="{% url 'password_reset' %}"
+                       class="text-spurs-silver hover:text-white text-sm transition-colors">
+                        <i class="fas fa-key mr-1"></i>Esqueci minha senha
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        {# Rodapé informativo #}
+        <p class="text-center text-gray-500 text-xs mt-6">
+            Acesso restrito a usuários cadastrados pelo administrador.
+        </p>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Você saiu — San Antonio Spurs{% endblock %}
+
+{% block content %}
+<section class="min-h-[80vh] flex items-center justify-center px-4 py-12">
+    <div class="w-full max-w-md text-center">
+
+        <div class="bg-gray-800 border border-gray-700 rounded-2xl shadow-2xl overflow-hidden">
+            <div class="bg-black px-8 py-6 border-b-4 border-spurs-silver">
+                <img src="{% static 'images/san-antonio-spurs-seeklogo.png' %}"
+                     alt="Spurs Logo"
+                     class="h-14 w-auto mx-auto mb-3">
+                <h1 class="text-2xl font-bold text-white tracking-wider">ATÉ LOGO!</h1>
+            </div>
+
+            <div class="px-8 py-10">
+                <div class="flex items-center justify-center w-16 h-16 bg-green-900/40 border border-green-600 rounded-full mx-auto mb-6">
+                    <i class="fas fa-check-circle text-green-400 text-3xl"></i>
+                </div>
+                <p class="text-gray-300 text-lg mb-2">Você foi desconectado com sucesso.</p>
+                <p class="text-gray-500 text-sm mb-8">Sua sessão foi encerrada com segurança.</p>
+
+                <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                    <a href="{% url 'login' %}"
+                       id="btn-login-again"
+                       class="bg-spurs-silver text-black font-bold px-6 py-3 rounded-lg hover:bg-white transition-colors">
+                        <i class="fas fa-sign-in-alt mr-2"></i>Entrar novamente
+                    </a>
+                    <a href="{% url 'home' %}"
+                       class="border border-spurs-silver text-spurs-silver font-bold px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-home mr-2"></i>Página Inicial
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

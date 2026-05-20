@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+
+{% block title %}Elenco - San Antonio Spurs{% endblock %}
+
+{% block content %}
+
+<!-- Estilos para animação alienígena e cósmica do Wemby -->
+<style>
+    @keyframes rotate-gradient {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+    
+    .alien-border {
+        background: linear-gradient(270deg, #10b981, #06b6d4, #8b5cf6, #10b981);
+        background-size: 800% 800%;
+        animation: rotate-gradient 6s ease infinite;
+    }
+    
+    .alien-glow {
+        box-shadow: 0 0 25px rgba(6, 182, 212, 0.25), 0 0 10px rgba(16, 185, 129, 0.15);
+        transition: all 0.5s ease-in-out;
+    }
+    
+    .alien-glow:hover {
+        box-shadow: 0 0 40px rgba(6, 182, 212, 0.5), 0 0 20px rgba(139, 92, 246, 0.35);
+        transform: translateY(-6px) scale(1.01);
+    }
+    
+    .alien-pulse {
+        animation: alien-pulse-keyframes 2s infinite alternate;
+    }
+    
+    @keyframes alien-pulse-keyframes {
+        0% { box-shadow: 0 0 8px rgba(16, 185, 129, 0.4); transform: scale(1); }
+        100% { box-shadow: 0 0 18px rgba(16, 185, 129, 0.8); transform: scale(1.05); }
+    }
+</style>
+
+<section class="container mx-auto px-4 py-20 relative z-10">
+    
+    <!-- Cabeçalho Principal Esportivo e Vibrante -->
+    <div class="text-center max-w-3xl mx-auto mb-20">
+        <span class="text-xs font-sporty text-fiesta-turquoise tracking-[0.35em] uppercase block">Plantel Oficial</span>
+        <h1 class="text-6xl md:text-8xl font-sporty text-white mt-3 mb-4 tracking-tight uppercase leading-none">
+            ELENCO <span class="text-fiesta-gradient">2025-26</span>
+        </h1>
+        <div class="h-[2px] w-28 bg-fiesta-gradient mx-auto my-6"></div>
+        <p class="text-gray-300 text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed">
+            Conheça os atletas que representam a força e a tradição das cores preta e prata do San Antonio Spurs.
+        </p>
+    </div>
+    
+    <h2 class="text-sm font-sporty text-fiesta-pink mb-8 flex items-center gap-3 uppercase tracking-[0.2em] border-b border-white/10 pb-4">
+        <span class="w-8 h-8 bg-white/5 border border-white/10 rounded-full flex items-center justify-center text-white text-xs"><i class="fas fa-users"></i></span>
+        Jogadores Ativos
+    </h2>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        {% for player in players %}
+            {% if player.name == "Victor Wembanyama" %}
+                <!-- CARD ESPECIAL ALIENÍGENA DO WEMBY -->
+                <div class="relative p-[2px] rounded-2xl alien-border alien-glow group">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-emerald-500/10 via-cyan-500/10 to-transparent rounded-2xl pointer-events-none"></div>
+                    
+                    <article class="bg-[#0b0c10] rounded-[14px] overflow-hidden h-full flex flex-col relative z-10">
+                        <div class="bg-gradient-to-b from-[#0a2327] via-[#0b0c16] to-[#040407] h-72 flex items-end justify-center relative overflow-hidden">
+                            <div class="absolute w-44 h-44 rounded-full bg-emerald-500/15 blur-3xl -top-10 left-10 pointer-events-none"></div>
+                            <div class="absolute w-44 h-44 rounded-full bg-cyan-500/15 blur-3xl -bottom-10 right-10 pointer-events-none"></div>
+                            
+                            <!-- Badge "THE ALIEN" -->
+                            <div class="absolute top-4 right-4 alien-pulse bg-black/60 backdrop-blur-md border border-emerald-500/50 text-emerald-400 text-[10px] font-sporty tracking-widest px-3 py-1.5 rounded-full flex items-center gap-1.5 z-20">
+                                <span>THE ALIEN</span>
+                                <span class="text-xs">👽</span>
+                            </div>
+                            
+                            {% if player.photo_src %}
+                            <img src="{{ player.photo_src }}" 
+                                 alt="{{ player.name }}" 
+                                 class="h-full object-cover transition-transform duration-500 group-hover:scale-105 filter drop-shadow-[0_0_15px_rgba(6,182,212,0.2)]">
+                            {% endif %}
+                        </div>
+                        
+                        <div class="p-5 flex-grow flex flex-col justify-between text-center">
+                            <div>
+                                <span class="text-xs text-cyan-400 font-sporty tracking-wider">{{ player.position }}</span>
+                                <h3 class="text-2xl font-sporty text-white mt-1 bg-gradient-to-r from-emerald-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent group-hover:from-emerald-300 group-hover:via-cyan-300 group-hover:to-indigo-300 transition-colors">
+                                    {{ player.name }}
+                                </h3>
+                                <p class="text-gray-400 text-sm font-medium">{{ player.position_full }}</p>
+                            </div>
+                            
+                            <div class="mt-6 pt-4 border-t border-white/5 flex justify-center gap-3 text-xs font-semibold text-gray-500">
+                                <span class="bg-white/5 border border-white/10 px-2.5 py-1 rounded text-cyan-400 font-sporty">#{{ player.number }}</span>
+                                <span class="bg-white/5 border border-white/10 px-2.5 py-1 rounded text-gray-300">{{ player.experience }}</span>
+                                <span class="bg-white/5 border border-white/10 px-2.5 py-1 rounded text-gray-300">{{ player.height }}</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            {% else %}
+                <!-- CARD NORMAL PARA OS OUTROS JOGADORES -->
+                <article class="bg-gradient-to-b from-[#0a1128]/70 to-[#050608]/95 border border-white/10 rounded-2xl overflow-hidden card-hover flex flex-col group shadow-lg">
+                    <div class="bg-gradient-to-b from-gray-900 via-gray-950 to-black h-72 flex items-end justify-center relative overflow-hidden">
+                        {% if player.photo_src %}
+                        <img src="{{ player.photo_src }}" 
+                             alt="{{ player.name }}" 
+                             class="h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        {% endif %}
+                    </div>
+                    
+                    <div class="p-5 flex-grow flex flex-col justify-between text-center">
+                        <div>
+                            <span class="text-xs text-fiesta-turquoise font-sporty tracking-wider">{{ player.position }}</span>
+                            <h3 class="text-2xl font-sporty text-white mt-1 group-hover:text-fiesta-pink transition-colors">{{ player.name }}</h3>
+                            <p class="text-gray-400 text-sm font-medium">{{ player.position_full }}</p>
+                        </div>
+                        
+                        <div class="mt-6 pt-4 border-t border-white/5 flex justify-center gap-3 text-xs font-semibold text-gray-500">
+                            <span class="bg-white/5 border border-white/10 px-2.5 py-1 rounded text-fiesta-turquoise font-sporty">#{{ player.number }}</span>
+                            <span class="bg-white/5 border border-white/10 px-2.5 py-1 rounded text-gray-300">{{ player.experience }}</span>
+                            <span class="bg-white/5 border border-white/10 px-2.5 py-1 rounded text-gray-300">{{ player.height }}</span>
+                        </div>
+                    </div>
+                </article>
+            {% endif %}
+        {% empty %}
+            <div class="col-span-full text-center py-12 bg-black/20 rounded-2xl border border-white/5">
+                <p class="text-gray-400">Nenhum jogador cadastrado no momento.</p>
+            </div>
+        {% endfor %}
+    </div>
+    
+    <div class="mt-16 p-8 bg-black/40 border border-white/10 rounded-2xl">
+        <h3 class="text-sm font-sporty text-fiesta-orange mb-4 uppercase tracking-[0.2em] text-center md:text-left">Legendas de Posições</h3>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-xs text-gray-400 font-medium">
+            <span class="bg-white/5 p-3 rounded-lg border border-white/5 text-center"><strong>PG:</strong> Point Guard (Armador)</span>
+            <span class="bg-white/5 p-3 rounded-lg border border-white/5 text-center"><strong>SG:</strong> Shooting Guard (Arremessador)</span>
+            <span class="bg-white/5 p-3 rounded-lg border border-white/5 text-center"><strong>SF:</strong> Small Forward (Ala)</span>
+            <span class="bg-white/5 p-3 rounded-lg border border-white/5 text-center"><strong>PF:</strong> Power Forward (Ala-Pivô)</span>
+            <span class="bg-white/5 p-3 rounded-lg border border-white/5 text-center"><strong>C:</strong> Center (Pivô)</span>
+            <span class="bg-white/5 p-3 rounded-lg border border-white/5 text-center"><strong>F/C:</strong> Forward/Center (Ala/Pivô)</span>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

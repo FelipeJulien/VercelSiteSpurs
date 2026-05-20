@@ -1,0 +1,71 @@
+/* Estilos Globais do Portal San Antonio Spurs */
+
+body {
+    background-color: #050811;
+    background-image: 
+        linear-gradient(180deg, #0a1128 0%, #03050a 100%),
+        repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.015) 0px, rgba(255, 255, 255, 0.015) 2px, transparent 2px, transparent 12px);
+    background-attachment: fixed;
+}
+
+/* Tipografia Esportiva Dinâmica (NBA Style) */
+.font-sporty {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+}
+
+/* Paleta Fiesta Colors & Gradientes */
+.bg-fiesta-gradient {
+    background: linear-gradient(90deg, #00B2A9 0%, #EF426F 50%, #FF8200 100%);
+}
+
+.text-fiesta-gradient {
+    background: linear-gradient(90deg, #00B2A9 0%, #EF426F 50%, #FF8200 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.border-fiesta-gradient {
+    border-image: linear-gradient(90deg, #00B2A9, #EF426F, #FF8200) 1;
+}
+
+/* Interatividade e Glow States */
+.fiesta-glow-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fiesta-glow-hover:hover {
+    box-shadow: 0 0 20px rgba(0, 178, 169, 0.4), 0 0 40px rgba(239, 66, 111, 0.2);
+}
+
+.card-hover {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-hover:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 20px 40px rgba(0, 178, 169, 0.15), 0 10px 20px rgba(239, 66, 111, 0.1);
+    border-color: rgba(239, 66, 111, 0.4) !important;
+}
+
+/* Animações */
+.animate-float {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+.animate-spin-slow {
+    animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

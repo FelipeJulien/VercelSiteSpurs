@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Início - San Antonio Spurs{% endblock %}
+
+{% block content %}
+<section class="relative min-h-[640px] flex items-center justify-center overflow-hidden">
+    <!-- Overlay gradiente escuro profissional -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/90 to-[#050811] z-10"></div>
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1546519638-68e109498ffc?w=1920'); opacity: 0.35;"></div>
+    
+    <div class="relative z-20 text-center px-4 py-20">
+        <!-- Detalhe decorativo Fiesta no topo -->
+        <div class="h-[4px] w-24 bg-fiesta-gradient mx-auto mb-8 rounded-full"></div>
+        
+        <img src="{% static 'images/san-antonio-spurs-seeklogo.png' %}" 
+             alt="Spurs Logo" 
+             class="h-44 mx-auto mb-6 animate-float filter drop-shadow-[0_0_30px_rgba(0,178,169,0.3)]">
+        
+        <!-- Título Dinâmico em Itálico / Bold (NBA Style) -->
+        <h1 class="text-6xl md:text-8xl font-sporty text-white tracking-tight leading-none mb-4">
+            SAN ANTONIO <span class="text-fiesta-gradient">SPURS</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
+            O time mais consistentemente vitorioso da história da NBA moderna.
+        </p>
+        
+        <!-- Botões com Hierarquia Visual Perfeita -->
+        <div class="flex flex-wrap gap-5 justify-center items-center">
+            <!-- Botão Primário Sólido Fiesta -->
+            <a href="{% url 'roster' %}" class="bg-gradient-to-r from-fiesta-pink via-fiesta-orange to-fiesta-pink bg-size-200 text-white font-sporty tracking-wider text-lg px-8 py-4 rounded-xl hover:scale-105 active:scale-95 transition-all duration-300 shadow-lg shadow-fiesta-pink/20 fiesta-glow-hover">
+                Ver Elenco
+            </a>
+            <!-- Botão Secundário Contornado (Outline) -->
+            <a href="{% url 'history' %}" class="border-2 border-white/60 hover:border-white text-white hover:bg-white hover:text-black font-sporty tracking-wider text-lg px-8 py-4 rounded-xl hover:scale-105 active:scale-95 transition-all duration-300">
+                Nossa História
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="container mx-auto px-4 py-24 relative z-10">
+    <!-- Título de Seção Esportivo -->
+    <div class="text-center max-w-3xl mx-auto mb-20">
+        <span class="text-xs font-sporty text-fiesta-turquoise tracking-[0.3em] uppercase block">Identidade Única</span>
+        <h2 class="text-4xl md:text-6xl font-sporty text-white mt-2 leading-none">
+            POR QUE OS <span class="text-fiesta-gradient">SPURS</span> SÃO ÚNICOS
+        </h2>
+        <div class="h-[2px] w-20 bg-fiesta-gradient mx-auto mt-6"></div>
+    </div>
+    
+    <!-- Grid com Cards e Hovers Interativos Fiesta -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <article class="bg-gradient-to-b from-[#0a1128]/70 to-[#050608]/95 border border-white/10 rounded-2xl p-8 card-hover shadow-xl group">
+            <div class="text-5xl mb-6 text-fiesta-turquoise group-hover:text-fiesta-pink transition-colors duration-300 filter drop-shadow-[0_0_15px_rgba(0,178,169,0.3)]">
+                <i class="fas fa-basketball"></i>
+            </div>
+            <h3 class="text-2xl font-sporty text-white mb-3 group-hover:text-fiesta-turquoise transition-colors">Tradição de Excelência</h3>
+            <p class="text-gray-300 text-sm leading-relaxed font-medium">
+                Com 5 títulos da NBA conquistados sob uma cultura vencedora, os Spurs são uma das franquias mais bem-sucedidas e respeitadas da história do esporte.
+            </p>
+        </article>
+        
+        <article class="bg-gradient-to-b from-[#0a1128]/70 to-[#050608]/95 border border-white/10 rounded-2xl p-8 card-hover shadow-xl group">
+            <div class="text-5xl mb-6 text-fiesta-pink group-hover:text-fiesta-orange transition-colors duration-300 filter drop-shadow-[0_0_15px_rgba(239,66,111,0.3)]">
+                <i class="fas fa-users"></i>
+            </div>
+            <h3 class="text-2xl font-sporty text-white mb-3 group-hover:text-fiesta-pink transition-colors">Cultura de Time</h3>
+            <p class="text-gray-300 text-sm leading-relaxed font-medium">
+                O famoso "Spurs Way" enfatiza o jogo coletivo, a disciplina tática, o altruísmo e o profissionalismo acima de qualquer individualidade.
+            </p>
+        </article>
+        
+        <article class="bg-gradient-to-b from-[#0a1128]/70 to-[#050608]/95 border border-white/10 rounded-2xl p-8 card-hover shadow-xl group">
+            <div class="text-5xl mb-6 text-fiesta-orange group-hover:text-fiesta-turquoise transition-colors duration-300 filter drop-shadow-[0_0_15px_rgba(255,130,0,0.3)]">
+                <i class="fas fa-star"></i>
+            </div>
+            <h3 class="text-2xl font-sporty text-white mb-3 group-hover:text-fiesta-orange transition-colors">Lendas Imortais</h3>
+            <p class="text-gray-300 text-sm leading-relaxed font-medium">
+                Tim Duncan, David Robinson, Tony Parker, Manu Ginóbili - nomes lendários que definiram eras e agora repousam no Hall da Fama.
+            </p>
+        </article>
+    </div>
+</section>
+
+<!-- Seção Explicativa Fiesta Colors -->
+<section class="container mx-auto px-4 py-12 relative z-10">
+    <div class="bg-gradient-to-r from-[#00B2A9]/10 via-[#EF426F]/10 to-[#FF8200]/10 border border-white/10 rounded-2xl p-8 md:p-12 relative overflow-hidden group shadow-2xl">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-fiesta-gradient opacity-10 blur-3xl rounded-full pointer-events-none"></div>
+        <div class="flex flex-col md:flex-row items-center gap-8">
+            <div class="flex-shrink-0 text-center md:text-left md:w-1/3">
+                <span class="text-xs font-sporty text-fiesta-pink tracking-[0.2em] uppercase block mb-2">A Tradição</span>
+                <h3 class="text-3xl md:text-4xl font-sporty text-white leading-none">A ORIGEM DAS <span class="text-fiesta-gradient">FIESTA COLORS</span></h3>
+                <div class="flex gap-1.5 mt-4 justify-center md:justify-start">
+                    <span class="w-8 h-2 bg-fiesta-turquoise rounded-full"></span>
+                    <span class="w-8 h-2 bg-fiesta-pink rounded-full"></span>
+                    <span class="w-8 h-2 bg-fiesta-orange rounded-full"></span>
+                </div>
+            </div>
+            <div class="text-gray-300 text-sm md:text-base leading-relaxed font-medium md:w-2/3">
+                Introduzidas nos anos 90, as cores <strong>Turquesa, Rosa e Laranja</strong> representam a vibrante herança cultural mexicana e hispânica de San Antonio. Inspiradas no tradicional festival <em>Fiesta San Antonio</em>, elas adicionaram energia festiva à sobriedade do preto e prata, tornando-se um símbolo nostálgico e amado pelos torcedores.
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Seção de Títulos com numeração gigantesca e vibrante -->
+<section class="bg-gradient-to-b from-black via-[#090b11] to-black border-y border-white/10 py-24 shadow-inner">
+    <div class="container mx-auto px-4">
+        <!-- Título Aprimorado -->
+        <div class="text-center max-w-3xl mx-auto mb-20">
+            <span class="text-xs font-sporty text-fiesta-orange tracking-[0.3em] uppercase block">Glória Mundial</span>
+            <h2 class="text-4xl md:text-6xl font-sporty text-white mt-2 leading-none">
+                NOSSOS <span class="text-fiesta-gradient">TÍTULOS NBA</span>
+            </h2>
+            <div class="h-[2px] w-20 bg-fiesta-gradient mx-auto mt-6"></div>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-6 max-w-5xl mx-auto">
+            {% for championship in championships %}
+            <div class="text-center p-8 bg-black/60 border border-white/10 hover:border-fiesta-orange/40 transition-all duration-300 rounded-2xl shadow-lg card-hover">
+                <!-- Números Gigantescos -->
+                <span class="text-5xl md:text-7xl font-sporty text-fiesta-orange block leading-none mb-2">{{ championship.year }}</span>
+                <p class="text-gray-400 text-xs font-bold uppercase tracking-wider">Campeão NBA</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="container mx-auto px-4 py-24 relative z-10">
+    <!-- Card de Citação com destaque lateral Fiesta -->
+    <div class="bg-gradient-to-r from-[#0a1128] via-black/90 to-black border border-white/10 rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 shadow-2xl relative overflow-hidden group">
+        <!-- Linha decorativa Fiesta sutil à esquerda -->
+        <div class="absolute left-0 top-0 bottom-0 w-[4px] bg-fiesta-gradient"></div>
+        
+        <img src="{% static 'images/tim_duncan_celebration.png' %}" 
+             alt="Tim Duncan" 
+             class="w-full md:w-1/3 rounded-xl shadow-2xl object-cover aspect-[16/9] border border-white/10 group-hover:border-fiesta-pink/30 transition-colors duration-300">
+        <div>
+            <blockquote class="text-2xl md:text-3xl font-light text-gray-200 italic mb-6 leading-relaxed">
+                "Quando você é culpado de algo, todos querem que você se desculpe. Quando você está certo, você pode ser tão silencioso quanto quiser."
+            </blockquote>
+            <cite class="text-spurs-silver font-sporty text-xl not-italic">— Tim Duncan, Lendário Big Fundamental</cite>
+        </div>
+    </div>
+</section>
+{% endblock %}

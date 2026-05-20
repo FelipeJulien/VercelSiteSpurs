@@ -1,0 +1,9 @@
+{
+  "buildCommand": "python manage.py collectstatic --noinput",
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "spurs_site/wsgi.py"
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}História — San Antonio Spurs{% endblock %}
+
+{% block content %}
+
+<section class="relative min-h-[480px] flex items-center justify-center overflow-hidden">
+    <!-- Imagem de fundo e gradiente restaurados com opacidade otimizada -->
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1518063319789-7217e6706b04?w=1920'); opacity: 0.35;"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/90 to-[#050811] opacity-90 z-10"></div>
+    
+    <div class="relative z-20 text-center px-4 py-20 max-w-3xl mx-auto">
+        <span class="text-xs font-sporty text-fiesta-turquoise tracking-[0.35em] uppercase block">A Trajetória</span>
+        <h1 class="text-6xl md:text-8xl font-sporty text-white mt-3 mb-4 tracking-tight uppercase leading-none">
+            NOSSA <span class="text-fiesta-gradient">HISTÓRIA</span>
+        </h1>
+        <div class="h-[2px] w-28 bg-fiesta-gradient mx-auto my-6 rounded-full"></div>
+        <p class="text-lg md:text-xl text-gray-300 font-medium leading-relaxed">Da semente no Texas à consagração de uma dinastia na NBA</p>
+    </div>
+</section>
+
+<section class="container mx-auto px-4 py-20 relative z-10">
+    <div class="text-center max-w-3xl mx-auto mb-20">
+        <span class="text-xs font-sporty text-fiesta-pink tracking-[0.2em] uppercase block">Evolução do Time</span>
+        <h2 class="text-4xl md:text-5xl font-sporty text-white mt-2 leading-none">
+            LINHA DO <span class="text-fiesta-gradient">TEMPO</span>
+        </h2>
+        <div class="h-[2px] w-20 bg-fiesta-gradient mx-auto mt-6"></div>
+    </div>
+
+    <!-- Timeline vertical -->
+    <div class="relative border-l-2 border-white/10 max-w-4xl mx-auto pl-8 space-y-12">
+        
+        <!-- Ponto 1 -->
+        <div class="relative group">
+            <div class="absolute -left-[41px] top-1 bg-[#050811] border-2 border-fiesta-turquoise w-5 h-5 rounded-full z-10 transition-transform duration-300 group-hover:scale-125"></div>
+            <article class="bg-black/60 border border-white/10 p-6 rounded-2xl card-hover shadow-lg">
+                <span class="text-3xl font-sporty text-fiesta-turquoise block mb-2">1967 — A Origem do Dallas Chaparrals</span>
+                <p class="text-gray-300 text-sm leading-relaxed font-medium">
+                    A franquia é fundada originalmente em Dallas como Dallas Chaparrals na extinta ABA (American Basketball Association), uma liga concorrente e alternativa à NBA conhecida por seu estilo vistoso.
+                </p>
+            </article>
+        </div>
+        
+        <!-- Ponto 2 -->
+        <div class="relative group">
+            <div class="absolute -left-[41px] top-1 bg-[#050811] border-2 border-fiesta-pink w-5 h-5 rounded-full z-10 transition-transform duration-300 group-hover:scale-125"></div>
+            <article class="bg-black/60 border border-white/10 p-6 rounded-2xl card-hover shadow-lg">
+                <span class="text-3xl font-sporty text-fiesta-pink block mb-2">1973 — Chegada a San Antonio</span>
+                <p class="text-gray-300 text-sm leading-relaxed font-medium">
+                    Após ser arrendado por um grupo de empresários de San Antonio liderado por Angelo Drossos, o time muda-se para a cidade e é rebatizado como San Antonio Spurs, abraçando a identidade texana.
+                </p>
+            </article>
+        </div>
+        
+        <!-- Ponto 3 -->
+        <div class="relative group">
+            <div class="absolute -left-[41px] top-1 bg-[#050811] border-2 border-fiesta-orange w-5 h-5 rounded-full z-10 transition-transform duration-300 group-hover:scale-125"></div>
+            <article class="bg-black/60 border border-white/10 p-6 rounded-2xl card-hover shadow-lg">
+                <span class="text-3xl font-sporty text-fiesta-orange block mb-2">1976 — Fusão ABA-NBA</span>
+                <p class="text-gray-300 text-sm leading-relaxed font-medium">
+                    Os Spurs tornam-se uma das quatro franquias da ABA a ingressar oficialmente na NBA após a fusão das ligas, juntamente com o Indiana Pacers, Denver Nuggets e New York Nets.
+                </p>
+            </article>
+        </div>
+        
+        <!-- Ponto 4 -->
+        <div class="relative group">
+            <div class="absolute -left-[41px] top-1 bg-[#050811] border-2 border-fiesta-turquoise w-5 h-5 rounded-full z-10 transition-transform duration-300 group-hover:scale-125"></div>
+            <article class="bg-black/60 border border-white/10 p-6 rounded-2xl card-hover shadow-lg">
+                <span class="text-3xl font-sporty text-fiesta-turquoise block mb-2">1987 — A Era de David Robinson</span>
+                <p class="text-gray-300 text-sm leading-relaxed font-medium">
+                    Os Spurs selecionam David "O Almirante" Robinson na primeira escolha geral do Draft de 1987, estabelecendo a base sólida para a futura dinastia de respeito do clube na liga.
+                </p>
+            </article>
+        </div>
+        
+        <!-- Ponto 5 -->
+        <div class="relative group">
+            <div class="absolute -left-[41px] top-1 bg-[#050811] border-2 border-fiesta-pink w-5 h-5 rounded-full z-10 transition-transform duration-300 group-hover:scale-125"></div>
+            <article class="bg-black/60 border border-white/10 p-6 rounded-2xl card-hover shadow-lg">
+                <span class="text-3xl font-sporty text-fiesta-pink block mb-2">1997 — Draft de Tim Duncan & Gregg Popovich</span>
+                <p class="text-gray-300 text-sm leading-relaxed font-medium">
+                    A seleção de Tim Duncan como primeira escolha em 1997 e o comando técnico de Gregg Popovich iniciam formalmente a era de maior estabilidade e vitórias consecutivas da história da NBA.
+                </p>
+            </article>
+        </div>
+        
+        <!-- Ponto 6 -->
+        <div class="relative group">
+            <div class="absolute -left-[41px] top-1 bg-[#050811] border-2 border-fiesta-orange w-5 h-5 rounded-full z-10 transition-transform duration-300 group-hover:scale-125"></div>
+            <article class="bg-black/60 border border-white/10 p-6 rounded-2xl card-hover shadow-lg">
+                <span class="text-3xl font-sporty text-fiesta-orange block mb-2">1999 - 2014 — A Dinastia de 5 Títulos</span>
+                <p class="text-gray-300 text-sm leading-relaxed font-medium">
+                    Sob a liderança das "Torres Gêmeas" (Robinson e Duncan) e posteriormente do histórico "Big Three" internacional (Duncan, Parker e Ginóbili), os Spurs levantam cinco troféus da NBA (1999, 2003, 2005, 2007 e 2014).
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- Seção Explicativa Fiesta Colors -->
+<section class="container mx-auto px-4 py-12 relative z-10">
+    <div class="bg-gradient-to-r from-[#00B2A9]/10 via-[#EF426F]/10 to-[#FF8200]/10 border border-white/10 rounded-2xl p-8 md:p-12 relative overflow-hidden group shadow-2xl">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-fiesta-gradient opacity-10 blur-3xl rounded-full pointer-events-none"></div>
+        <div class="flex flex-col md:flex-row items-center gap-8">
+            <div class="flex-shrink-0 text-center md:text-left md:w-1/3">
+                <span class="text-xs font-sporty text-fiesta-pink tracking-[0.2em] uppercase block mb-2">A Tradição</span>
+                <h3 class="text-3xl md:text-4xl font-sporty text-white leading-none">A ORIGEM DAS <span class="text-fiesta-gradient">FIESTA COLORS</span></h3>
+                <div class="flex gap-1.5 mt-4 justify-center md:justify-start">
+                    <span class="w-8 h-2 bg-fiesta-turquoise rounded-full"></span>
+                    <span class="w-8 h-2 bg-fiesta-pink rounded-full"></span>
+                    <span class="w-8 h-2 bg-fiesta-orange rounded-full"></span>
+                </div>
+            </div>
+            <div class="text-gray-300 text-sm md:text-base leading-relaxed font-medium md:w-2/3">
+                Introduzidas nos anos 90, as cores <strong>Turquesa, Rosa e Laranja</strong> representam a vibrante herança cultural mexicana e hispânica de San Antonio. Inspiradas no tradicional festival <em>Fiesta San Antonio</em>, elas adicionaram energia festiva à sobriedade do preto e prata, tornando-se um símbolo nostálgico e amado pelos torcedores.
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-gradient-to-b from-black via-[#090b11] to-black border-y border-white/10 py-20 shadow-inner relative z-10">
+    <div class="container mx-auto px-4">
+        
+        <div class="text-center max-w-3xl mx-auto mb-20">
+            <span class="text-xs font-sporty text-fiesta-turquoise tracking-[0.3em] uppercase block">Imortais</span>
+            <h2 class="text-4xl md:text-5xl font-sporty text-white mt-2 leading-none">
+                NOSSAS <span class="text-fiesta-gradient">LENDAS</span>
+            </h2>
+            <div class="h-[2px] w-20 bg-fiesta-gradient mx-auto mt-6"></div>
+        </div>
+
+        {# Destaque Principal: Tim Duncan #}
+        <div class="max-w-5xl mx-auto mb-16 relative">
+            <div class="bg-gradient-to-r from-[#0a1128] via-gray-950 to-[#03050a] border border-white/10 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden group">
+                <!-- Efeito Fiesta no fundo -->
+                <div class="absolute left-0 top-0 bottom-0 w-[4px] bg-fiesta-gradient"></div>
+                <div class="absolute w-72 h-72 rounded-full bg-fiesta-pink/5 blur-3xl -bottom-20 -right-20 pointer-events-none"></div>
+
+                <div class="flex flex-col md:flex-row items-center gap-10">
+                    <div class="relative w-48 h-48 md:w-64 md:h-64 flex-shrink-0">
+                        <div class="absolute inset-0 rounded-full bg-fiesta-pink/20 blur-xl"></div>
+                        <img src="{% static 'images/tim_duncan_celebration.png' %}" 
+                             alt="Tim Duncan" 
+                             class="w-full h-full rounded-full object-cover border-4 border-fiesta-pink/40 group-hover:border-fiesta-pink/60 transition-colors duration-300 shadow-2xl relative z-10">
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap items-center gap-3 mb-3">
+                            <span class="bg-fiesta-pink/15 text-fiesta-pink border border-fiesta-pink/30 text-xs font-sporty tracking-widest px-3.5 py-1.5 rounded-full uppercase">Lenda Suprema</span>
+                            <span class="bg-white/5 border border-white/10 text-gray-300 text-xs font-bold px-3 py-1.5 rounded-full uppercase">#21</span>
+                        </div>
+                        <h3 class="text-4xl md:text-5xl font-sporty text-white mb-4 group-hover:text-fiesta-pink transition-colors leading-none">TIM DUNCAN</h3>
+                        <p class="text-gray-300 leading-relaxed font-medium mb-6">
+                            Considerado o maior Ala-Pivô (Power Forward) da história do basquetebol mundial. Conhecido como "The Big Fundamental", Duncan era calmo, frio e cirúrgico na quadra. Liderou a franquia em todas as suas cinco conquistas de título da NBA.
+                        </p>
+                        <div class="grid grid-cols-3 gap-4 text-center border-t border-white/10 pt-6">
+                            <div class="bg-black/40 border border-white/5 rounded-xl p-3">
+                                <span class="text-3xl font-sporty text-fiesta-turquoise">5</span>
+                                <p class="text-[10px] text-gray-500 uppercase tracking-wider font-bold">Títulos</p>
+                            </div>
+                            <div class="bg-black/40 border border-white/5 rounded-xl p-3">
+                                <span class="text-3xl font-sporty text-fiesta-pink">3</span>
+                                <p class="text-[10px] text-gray-500 uppercase tracking-wider font-bold">Finais MVP</p>
+                            </div>
+                            <div class="bg-black/40 border border-white/5 rounded-xl p-3">
+                                <span class="text-3xl font-sporty text-fiesta-orange">2</span>
+                                <p class="text-[10px] text-gray-500 uppercase tracking-wider font-bold">Season MVP</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {# Grid com as outras lendas do time #}
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            
+            <!-- David Robinson -->
+            <article class="bg-black/60 border border-white/10 rounded-2xl p-6 card-hover shadow-lg group">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-fiesta-turquoise flex-shrink-0 bg-gray-800">
+                        <img src="https://www.basketball-reference.com/req/202106291/images/headshots/robinda01.jpg" alt="David Robinson" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h4 class="text-2xl font-sporty text-white group-hover:text-fiesta-turquoise transition-colors leading-none">DAVID ROBINSON</h4>
+                        <span class="text-[10px] text-fiesta-turquoise uppercase font-bold tracking-wider">O Almirante (Pivô)</span>
+                    </div>
+                </div>
+                <p class="text-gray-300 text-sm leading-relaxed font-medium">
+                    Serviu na Marinha americana antes de sua brilhante carreira na NBA. Jogador de técnica impecável e postura ética lendária, conquistou 2 campeonatos da NBA ao lado de Duncan.
+                </p>
+            </article>
+
+            <!-- Manu Ginóbili -->
+            <article class="bg-black/60 border border-white/10 rounded-2xl p-6 card-hover shadow-lg group">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-fiesta-pink flex-shrink-0 bg-gray-800">
+                        <img src="https://www.basketball-reference.com/req/202106291/images/headshots/ginobma01.jpg" alt="Manu Ginóbili" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h4 class="text-2xl font-sporty text-white group-hover:text-fiesta-pink transition-colors leading-none">MANU GINÓBILI</h4>
+                        <span class="text-[10px] text-fiesta-pink uppercase font-bold tracking-wider">El Contus (Escolta)</span>
+                    </div>
+                </div>
+                <p class="text-gray-300 text-sm leading-relaxed font-medium">
+                    Um dos jogadores internacionais mais influentes e populares do esporte. Criador do famoso "Eurostep" na liga norte-americana, conquistou 4 títulos e foi o 6º homem perfeito.
+                </p>
+            </article>
+
+            <!-- Tony Parker -->
+            <article class="bg-black/60 border border-white/10 rounded-2xl p-6 card-hover shadow-lg group">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-fiesta-orange flex-shrink-0 bg-gray-800">
+                        <img src="https://www.basketball-reference.com/req/202106291/images/headshots/parketo01.jpg" alt="Tony Parker" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h4 class="text-2xl font-sporty text-white group-hover:text-fiesta-orange transition-colors leading-none">TONY PARKER</h4>
+                        <span class="text-[10px] text-fiesta-orange uppercase font-bold tracking-wider">Armador Francês</span>
+                    </div>
+                </div>
+                <p class="text-gray-300 text-sm leading-relaxed font-medium">
+                    O veloz armador francês que quebrava as defesas adversárias com infiltrações rápidas e seu "tear drop" perfeito. MVP das finais em 2007 e vencedor de 4 títulos da NBA.
+                </p>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<section class="container mx-auto px-4 py-20 relative z-10 text-center">
+    <div class="bg-gradient-to-r from-[#0a1128] via-black/85 to-black border border-white/10 rounded-2xl p-10 max-w-4xl mx-auto shadow-2xl relative overflow-hidden group">
+        <div class="absolute left-0 right-0 top-0 h-[3px] bg-fiesta-gradient"></div>
+        <h3 class="text-3xl font-sporty text-white mb-4">A JORNADA SE SEGUE</h3>
+        <p class="text-gray-300 mb-8 max-w-2xl mx-auto text-sm md:text-base leading-relaxed font-medium">
+            A mentalidade de equipe do San Antonio Spurs continua inspirando fãs e gerações futuras de atletas no mundo todo.
+        </p>
+        <a href="{% url 'roster' %}" 
+           class="inline-block bg-gradient-to-r from-fiesta-pink to-fiesta-orange text-white px-8 py-4 rounded-xl font-sporty text-lg hover:scale-105 active:scale-95 transition-all duration-300 shadow-md">
+            Ver Elenco Atual
+        </a>
+    </div>
+</section>
+
+{% endblock %}

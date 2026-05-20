@@ -1,0 +1,112 @@
+[
+    {
+        "model": "core.historyevent",
+        "pk": 1,
+        "fields": {
+            "year": 1967,
+            "title": "O Nascimento de uma Franquia",
+            "description": "Fundado como Dallas Chaparrals na ABA em 1967, o time se mudou para San Antonio em 1973 e adotou o nome Spurs — uma referência às esporas dos cowboys texanos. Em 1976, ingressaram na NBA como parte do merger histórico entre as duas ligas.",
+            "order": 1
+        }
+    },
+    {
+        "model": "core.historyevent",
+        "pk": 2,
+        "fields": {
+            "year": 1989,
+            "title": "O Almirante Chega",
+            "description": "David Robinson é draftado em 1987 e estreia em 1989 após cumprir o serviço militar obrigatório. O 'Almirante' transformou os Spurs de um time mediano numa potência, vencendo o prêmio de MVP da NBA em 1995. Sua parceria com Tim Duncan formaria o duo de pivôs mais dominante da história.",
+            "order": 2
+        }
+    },
+    {
+        "model": "core.historyevent",
+        "pk": 3,
+        "fields": {
+            "year": 1997,
+            "title": "A Chegada do Fundamento",
+            "description": "Com a saúde de David Robinson comprometida e uma temporada catastrófica (20–62), os Spurs conquistaram a 1ª escolha do draft de 1997 e selecionaram Tim Duncan — um Power Forward/Center com técnica perfeita, apelido de 'The Big Fundamental'. Foi o início da maior era da franquia.",
+            "order": 3
+        }
+    },
+    {
+        "model": "core.historyevent",
+        "pk": 4,
+        "fields": {
+            "year": 1999,
+            "title": "Primeiro Título — A Dinastia Começa",
+            "description": "Numa temporada encurtada pelo lockout, os Spurs derrotaram o New York Knicks 4–1 nas Finals. Tim Duncan, com apenas 23 anos, foi eleito MVP das Finais e da temporada regular. Robinson e Duncan formaram o melhor par de pivôs da história. San Antonio comemorava seu primeiro campeonato.",
+            "order": 4
+        }
+    },
+    {
+        "model": "core.historyevent",
+        "pk": 5,
+        "fields": {
+            "year": 2001,
+            "title": "O Big Three Nasce",
+            "description": "Tony Parker chega no draft de 2001 como um francês de 19 anos — rápido, criativo e determinado. No ano seguinte, em 2002, Manu Ginóbili é revelado a partir da segunda rodada, vindo da Itália. Junto com Tim Duncan, formam o lendário 'Big Three' — o trio mais vitorioso da NBA moderna.",
+            "order": 5
+        }
+    },
+    {
+        "model": "core.historyevent",
+        "pk": 6,
+        "fields": {
+            "year": 2003,
+            "title": "O Segundo Anel — Duncan Imortalizado",
+            "description": "Os Spurs vencem o New Jersey Nets 4–2 nas Finals. Tim Duncan novamente MVP das Finais com médias de 24.2 pts, 17 reb, 5.3 ast e 5.3 blo. Pop Gregg Popovich consolidava a dinastia. Duncan entrava definitivamente para o panteão dos maiores jogadores de todos os tempos.",
+            "order": 6
+        }
+    },
+    {
+        "model": "core.historyevent",
+        "pk": 7,
+        "fields": {
+            "year": 2005,
+            "title": "Terceiro Título — Big Three em Chamas",
+            "description": "Série épica contra o Detroit Pistons — campeões defensores — que os Spurs venceram em 7 jogos. Tim Duncan foi eleito MVP das Finals pela terceira vez. Manu Ginóbili explodiu com atuações espetaculares. Tony Parker começava a se firmar como um dos melhores armadores do mundo.",
+            "order": 7
+        }
+    },
+    {
+        "model": "core.historyevent",
+        "pk": 8,
+        "fields": {
+            "year": 2007,
+            "title": "Sweep Histórico — Parker Brilha",
+            "description": "Os Spurs varreram o Cleveland Cavaliers de LeBron James em 4 jogos consecutivos. Tony Parker foi eleito MVP das Finals — o primeiro europeu a conquistar esse prêmio. Tim Duncan, aos 31 anos, ainda era dominante com 14.8 pts e 11 reb. A maior parte do país ainda subestimava San Antonio.",
+            "order": 8
+        }
+    },
+    {
+        "model": "core.historyevent",
+        "pk": 9,
+        "fields": {
+            "year": 2014,
+            "title": "A Obra-Prima — O Basquete Mais Bonito",
+            "description": "A revanche após a derrota de 2013. Os Spurs destruíram o Miami Heat de LeBron James 4–1 com o basquete coletivo mais bonito já visto. Kawhi Leonard, MVP das Finals, Ginóbili e Parker em seus últimos momentos de glória máxima. Tim Duncan, aos 38 anos, liderando pelo exemplo. A NBA inteira se rendeu ao 'Spurs Way'.",
+            "order": 9
+        }
+    },
+    {
+        "model": "core.historyevent",
+        "pk": 10,
+        "fields": {
+            "year": 2016,
+            "title": "Fim de uma Era",
+            "description": "Tim Duncan se aposenta após 19 temporadas, todos com os Spurs. Nunca jogou por outra franquia. 5 títulos, 3 MVPs das Finals, 2 MVPs da temporada, 15 All-Star Games. O maior jogador da história dos San Antonio Spurs deixou o court com a dignidade e a classe que sempre o definiu.",
+            "order": 10
+        }
+    },
+    {
+        "model": "core.historyevent",
+        "pk": 11,
+        "fields": {
+            "year": 2023,
+            "title": "Victor Wembanyama — Uma Nova Era",
+            "description": "O prospect mais esperado desde LeBron James, Victor Wembanyama é draftado com a 1ª escolha. Francês, 2,24m, com habilidades únicas: bloqueia e arremessa de 3 como um ala. Em sua primeira temporada, ganhou o prêmio de Melhor Jogador Novato. San Antonio acredita que o próximo capítulo será tão glorioso quanto o de Duncan.",
+            "order": 11
+        }
+    }
+]

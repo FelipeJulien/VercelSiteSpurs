@@ -1,0 +1,217 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Arena - San Antonio Spurs{% endblock %}
+
+{% block content %}
+<section class="relative min-h-[480px] flex items-center justify-center overflow-hidden">
+    <!-- Imagem de fundo com mais opacidade e overlay profissional -->
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('{% static 'images/arena_fiesta.jpg' %}'); opacity: 0.35;"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/90 to-[#050811] opacity-90 z-10"></div>
+    
+    <div class="relative z-20 text-center px-4 py-20 max-w-3xl mx-auto">
+        <span class="text-xs font-sporty text-fiesta-turquoise tracking-[0.35em] uppercase block">O Templo do Basquete</span>
+        <h1 class="text-6xl md:text-8xl font-sporty text-white mt-3 mb-4 tracking-tight uppercase leading-none">
+            FROST BANK <span class="text-fiesta-gradient">CENTER</span>
+        </h1>
+        <div class="h-[2px] w-28 bg-fiesta-gradient mx-auto my-6 rounded-full"></div>
+        <p class="text-lg md:text-xl text-gray-300 font-medium leading-relaxed">A casa oficial e fortaleza dos San Antonio Spurs</p>
+    </div>
+</section>
+
+<section class="container mx-auto px-4 py-20 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+            <!-- Subtítulo esportivo -->
+            <span class="text-xs font-sporty text-fiesta-pink tracking-[0.2em] uppercase block mb-2">A Estrutura</span>
+            <h2 class="text-4xl md:text-5xl font-sporty text-white mb-6 uppercase leading-none">
+                SOBRE A <span class="text-fiesta-gradient">ARENA</span>
+            </h2>
+            <div class="space-y-6 text-gray-300 leading-relaxed font-medium">
+                <p>
+                    O Frost Bank Center, anteriormente conhecido como AT&T Center, é uma arena multiuso de última geração localizada 
+                    em San Antonio, Texas. Inaugurado em 2002, o local é o palco sagrado das maiores glórias dos Spurs na história moderna da NBA.
+                </p>
+                <p>
+                    Com capacidade para mais de 18.000 espectadores em noites de jogo, a arena oferece uma 
+                    experiência totalmente imersiva, combinando telas gigantes de alta definição com uma acústica 
+                    eletrizante que transforma a quadra em um verdadeiro caldeirão de energia.
+                </p>
+            </div>
+            
+            <!-- Grid de stats com card-hover -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-10">
+                <div class="bg-black/60 border border-white/10 rounded-xl p-4 text-center card-hover shadow-lg">
+                    <span class="text-2xl font-sporty text-white">18.000+</span>
+                    <p class="text-[10px] text-gray-400 uppercase font-bold tracking-wider mt-1">Capacidade</p>
+                </div>
+                <div class="bg-black/60 border border-white/10 rounded-xl p-4 text-center card-hover shadow-lg">
+                    <span class="text-2xl font-sporty text-white">2002</span>
+                    <p class="text-[10px] text-gray-400 uppercase font-bold tracking-wider mt-1">Inauguração</p>
+                </div>
+                <div class="bg-black/60 border border-white/10 rounded-xl p-4 text-center card-hover shadow-lg">
+                    <span class="text-2xl font-sporty text-white">40+</span>
+                    <p class="text-[10px] text-gray-400 uppercase font-bold tracking-wider mt-1">Suítes Luxo</p>
+                </div>
+                <div class="bg-black/60 border border-white/10 rounded-xl p-4 text-center card-hover shadow-lg">
+                    <span class="text-2xl font-sporty text-white">6</span>
+                    <p class="text-[10px] text-gray-400 uppercase font-bold tracking-wider mt-1">Níveis</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="relative group">
+            <img src="{% static 'images/arena_fiesta.jpg' %}" 
+                 alt="Interior da Arena com Cores Fiesta" 
+                 class="rounded-2xl shadow-2xl w-full border border-white/10 transition-transform duration-500 group-hover:scale-[1.02]">
+        </div>
+    </div>
+</section>
+
+<section class="bg-gradient-to-b from-black via-[#090b11] to-black border-y border-white/10 py-20 shadow-inner relative z-10">
+    <div class="container mx-auto px-4">
+        <!-- Título da Seção Aprimorado -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-xs font-sporty text-fiesta-orange tracking-[0.3em] uppercase block">Diferenciais</span>
+            <h2 class="text-4xl md:text-5xl font-sporty text-white mt-2 mb-4 tracking-tight uppercase leading-none">
+                INSTALAÇÕES E <span class="text-fiesta-gradient">SERVIÇOS</span>
+            </h2>
+            <div class="h-[2px] w-20 bg-fiesta-gradient mx-auto mt-6"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <article class="bg-black/75 border border-white/10 rounded-2xl p-6 card-hover shadow-md group">
+                <div class="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-2xl text-fiesta-turquoise mb-5 group-hover:bg-fiesta-turquoise/10 transition-colors"><i class="fas fa-utensils"></i></div>
+                <h3 class="text-xl font-sporty text-white mb-2">Gastronomia</h3>
+                <p class="text-gray-300 text-sm leading-relaxed font-medium">
+                    Mais de 40 pontos de alimentação oferecendo desde culinária clássica texana até opções internacionais refinadas.
+                </p>
+            </article>
+            
+            <article class="bg-black/75 border border-white/10 rounded-2xl p-6 card-hover shadow-md group">
+                <div class="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-2xl text-fiesta-pink mb-5 group-hover:bg-fiesta-pink/10 transition-colors"><i class="fas fa-car"></i></div>
+                <h3 class="text-xl font-sporty text-white mb-2">Estacionamento</h3>
+                <p class="text-gray-300 text-sm leading-relaxed font-medium">
+                    Amplo estacionamento integrado com milhares de vagas organizadas, guias inteligentes e serviço especial de valet.
+                </p>
+            </article>
+            
+            <article class="bg-black/75 border border-white/10 rounded-2xl p-6 card-hover shadow-md group">
+                <div class="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-2xl text-fiesta-orange mb-5 group-hover:bg-fiesta-orange/10 transition-colors"><i class="fas fa-wheelchair"></i></div>
+                <h3 class="text-xl font-sporty text-white mb-2">Acessibilidade</h3>
+                <p class="text-gray-300 text-sm leading-relaxed font-medium">
+                    Instalações projetadas de forma inclusiva, com assentos dedicados, rampas e banheiros completamente adaptados.
+                </p>
+            </article>
+            
+            <article class="bg-black/75 border border-white/10 rounded-2xl p-6 card-hover shadow-md group">
+                <div class="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-2xl text-fiesta-turquoise mb-5 group-hover:bg-fiesta-turquoise/10 transition-colors"><i class="fas fa-wifi"></i></div>
+                <h3 class="text-xl font-sporty text-white mb-2">Tecnologia Conectada</h3>
+                <p class="text-gray-300 text-sm leading-relaxed font-medium">
+                    Wi-Fi ultra-rápido gratuito em toda a arena, painéis interativos e suporte ao app oficial para pedidos e estatísticas.
+                </p>
+            </article>
+            
+            <article class="bg-black/75 border border-white/10 rounded-2xl p-6 card-hover shadow-md group">
+                <div class="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-2xl text-fiesta-pink mb-5 group-hover:bg-fiesta-pink/10 transition-colors"><i class="fas fa-shopping-bag"></i></div>
+                <h3 class="text-xl font-sporty text-white mb-2">Spurs Fan Shop</h3>
+                <p class="text-gray-300 text-sm leading-relaxed font-medium">
+                    A colossal megastore oficial no interior da arena com produtos distribuídos e camisas de jogo exclusivas.
+                </p>
+            </article>
+            
+            <article class="bg-black/75 border border-white/10 rounded-2xl p-6 card-hover shadow-md group">
+                <div class="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-2xl text-fiesta-orange mb-5 group-hover:bg-fiesta-orange/10 transition-colors"><i class="fas fa-music"></i></div>
+                <h3 class="text-xl font-sporty text-white mb-2">Shows & Eventos</h3>
+                <p class="text-gray-300 text-sm leading-relaxed font-medium">
+                    Palco principal da cidade para grandes turnês internacionais de música, feiras gigantescas e congressos mundiais.
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="container mx-auto px-4 py-20 relative z-10">
+    <!-- Título da Seção Aprimorado -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-sporty text-fiesta-turquoise tracking-[0.3em] uppercase block">Guia Prático</span>
+        <h2 class="text-4xl md:text-5xl font-sporty text-white mt-2 mb-4 tracking-tight uppercase leading-none">
+            INFORMAÇÕES PARA <span class="text-fiesta-gradient">VISITANTES</span>
+        </h2>
+        <div class="h-[2px] w-20 bg-fiesta-gradient mx-auto mt-6"></div>
+    </div>
+    
+    <div class="bg-gradient-to-br from-black via-[#0c1224]/80 to-black border border-white/10 rounded-2xl p-8 md:p-12 shadow-2xl">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+                <h3 class="text-2xl font-sporty text-white mb-4 flex items-center gap-2">
+                    <span class="text-fiesta-turquoise"><i class="fas fa-map-marker-alt"></i></span> Localização
+                </h3>
+                <p class="text-white font-bold mb-1">Frost Bank Center</p>
+                <p class="text-gray-300 text-sm">1 Frost Bank Center Dr</p>
+                <p class="text-gray-300 text-sm">San Antonio, TX 78219</p>
+                <p class="text-gray-300 text-sm">Estados Unidos</p>
+                
+                <h3 class="text-2xl font-sporty text-white mb-4 mt-8 flex items-center gap-2">
+                    <span class="text-fiesta-pink"><i class="fas fa-clock"></i></span> Horários
+                </h3>
+                <ul class="text-gray-300 text-sm space-y-3 font-medium">
+                    <li class="flex justify-between border-b border-white/5 pb-2">
+                        <span>Dias de Jogo (Portões):</span>
+                        <span class="text-white">Abertura 1h30 antes</span>
+                    </li>
+                    <li class="flex justify-between border-b border-white/5 pb-2">
+                        <span>Bilheteria Principal:</span>
+                        <span class="text-white">Segunda a Sábado, 10h - 18h</span>
+                    </li>
+                    <li class="flex justify-between pb-2">
+                        <span>Spurs Fan Shop:</span>
+                        <span class="text-white">Segunda a Sábado, 10h - 21h</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="flex flex-col justify-between">
+                <div>
+                    <h3 class="text-2xl font-sporty text-white mb-4 flex items-center gap-2">
+                        <span class="text-fiesta-orange"><i class="fas fa-ticket-alt"></i></span> Ingressos
+                    </h3>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-6 font-medium">
+                        Adquira suas entradas legítimas diretamente nos canais oficiais do clube ou pela plataforma parceira Ticketmaster. Os preços flutuam com base no adversário e setor.
+                    </p>
+                    
+                    <div class="bg-black/80 border border-white/10 rounded-xl p-5 mb-6 shadow-md">
+                        <h4 class="font-sporty text-fiesta-orange text-xs tracking-wider mb-3">Estimativa de Preços (Temporada Regular)</h4>
+                        <ul class="text-gray-400 text-xs space-y-2 font-medium">
+                            <li class="flex justify-between"><span>Setor Inferior (Lower Bowl):</span> <span class="text-white font-bold">$80 - $350+</span></li>
+                            <li class="flex justify-between"><span>Setor Superior (Upper Bowl):</span> <span class="text-white font-bold">$25 - $80+</span></li>
+                            <li class="flex justify-between"><span>Suítes Executivas:</span> <span class="text-white font-bold">Sob consulta</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <a href="https://www.nba.com/spurs/tickets" 
+                   target="_blank"
+                   class="w-full text-center bg-gradient-to-r from-fiesta-pink to-fiesta-orange text-white py-4 rounded-xl font-sporty text-lg hover:scale-105 active:scale-95 transition-all duration-300 shadow-md">
+                    Comprar Ingressos →
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container mx-auto px-4 pb-20 relative z-10">
+    <div class="bg-gradient-to-r from-[#0a1128] via-black/85 to-black border border-white/10 rounded-2xl p-10 text-center relative overflow-hidden group shadow-xl">
+        <div class="absolute w-64 h-64 rounded-full bg-fiesta-pink/5 blur-3xl -top-20 -right-20 pointer-events-none"></div>
+        <h3 class="text-3xl font-sporty text-white mb-4">EXPERIMENTE A MAGIA DA NBA</h3>
+        <p class="text-gray-300 mb-8 max-w-2xl mx-auto text-sm md:text-base leading-relaxed font-medium">
+            Nada se compara à adrenalina pura e à energia ensurdecedora de vivenciar um jogo do San Antonio Spurs no Frost Bank Center de perto. Garanta sua vaga!
+        </p>
+        <a href="https://www.nba.com/spurs" 
+           target="_blank"
+           class="inline-block bg-white text-black px-8 py-4 rounded-xl font-sporty text-lg hover:bg-spurs-silver transition-all duration-300 shadow-md">
+            Portal Oficial dos Spurs
+        </a>
+    </div>
+</section>
+{% endblock %}

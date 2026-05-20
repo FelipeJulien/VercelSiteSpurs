@@ -1,0 +1,42 @@
+[
+    {
+        "model": "core.championship",
+        "pk": 1,
+        "fields": {
+            "year": 1999,
+            "description": "1º Título — NBA Finals MVP: Tim Duncan. Derrotaram o New York Knicks 4–1 numa temporada encurtada pelo lockout. O começo de uma dinastia."
+        }
+    },
+    {
+        "model": "core.championship",
+        "pk": 2,
+        "fields": {
+            "year": 2003,
+            "description": "2º Título — NBA Finals MVP: Tim Duncan. Vingança sobre o New Jersey Nets 4–2. Duncan entrou para o seleto grupo dos maiores da história."
+        }
+    },
+    {
+        "model": "core.championship",
+        "pk": 3,
+        "fields": {
+            "year": 2005,
+            "description": "3º Título — NBA Finals MVP: Tim Duncan. O Big Three em plena força: Duncan, Parker e Ginóbili varreram o Detroit Pistons 4–3 numa série épica."
+        }
+    },
+    {
+        "model": "core.championship",
+        "pk": 4,
+        "fields": {
+            "year": 2007,
+            "description": "4º Título — NBA Finals MVP: Tony Parker. Sweep histórico sobre o Cleveland Cavaliers de LeBron James. Parker, o primeiro europeu MVP das Finals."
+        }
+    },
+    {
+        "model": "core.championship",
+        "pk": 5,
+        "fields": {
+            "year": 2014,
+            "description": "5º Título — NBA Finals MVP: Kawhi Leonard. O basquete mais bonito da história da NBA. Derrotaram o Miami Heat de LeBron James 4–1 com passes e movimentação perfeitos."
+        }
+    }
+]

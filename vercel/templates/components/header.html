@@ -1,0 +1,217 @@
+{% load static %}
+<header class="sticky top-0 z-50 bg-black/85 backdrop-blur-md border-b border-white/10 shadow-2xl transition-all duration-300">
+    <!-- Linha decorativa de gradiente no topo do header para dar um ar premium -->
+    <div class="h-[2px] w-full bg-gradient-to-r from-transparent via-spurs-silver to-transparent opacity-60"></div>
+    
+    <nav class="container mx-auto px-6">
+        <div class="flex items-center justify-between h-20">
+            
+            <!-- Logo e Título com fonte Outfit e transição suave -->
+            <a href="{% url 'home' %}" class="flex items-center gap-3.5 group">
+                <div class="relative overflow-hidden p-1 rounded-full transition-transform duration-500 group-hover:rotate-[360deg]">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-spurs-silver to-white opacity-0 group-hover:opacity-20 rounded-full transition-opacity"></div>
+                    <img src="{% static 'images/san-antonio-spurs-seeklogo.png' %}" 
+                         alt="San Antonio Spurs Logo" 
+                         class="h-11 w-auto relative z-10 filter drop-shadow-[0_0_8px_rgba(255,255,255,0.15)]">
+                </div>
+                <span class="text-xl md:text-2xl font-outfit font-black text-white tracking-wider flex items-center gap-1 transition-colors duration-300 group-hover:text-spurs-silver">
+                    SAN ANTONIO <span class="text-spurs-silver font-normal group-hover:text-white transition-colors duration-300">SPURS</span>
+                </span>
+            </a>
+            
+            <!-- Menu Hamburguer Mobile Estilizado -->
+            <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-lg border border-white/10 hover:bg-white/5 transition-all text-white focus:outline-none" aria-label="Abrir Menu">
+                <svg id="hamburger-icon" class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg id="close-icon" class="w-6 h-6 hidden transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            
+            <!-- Navegação Desktop -->
+            <ul class="hidden md:flex items-center gap-8">
+                <li>
+                    <a href="{% url 'home' %}" 
+                       class="relative py-2 text-sm font-semibold tracking-wide transition-all duration-300 group
+                       {% if request.path == '/' %}text-white{% else %}text-gray-400 hover:text-white{% endif %}">
+                        Início
+                        <span class="absolute bottom-0 left-0 h-[2px] bg-spurs-silver transition-all duration-300 
+                        {% if request.path == '/' %}w-full{% else %}w-0 group-hover:w-full{% endif %}"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'roster' %}" 
+                       class="relative py-2 text-sm font-semibold tracking-wide transition-all duration-300 group
+                       {% if request.path == '/roster/' %}text-white{% else %}text-gray-400 hover:text-white{% endif %}">
+                        Elenco
+                        <span class="absolute bottom-0 left-0 h-[2px] bg-spurs-silver transition-all duration-300 
+                        {% if request.path == '/roster/' %}w-full{% else %}w-0 group-hover:w-full{% endif %}"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'history' %}" 
+                       class="relative py-2 text-sm font-semibold tracking-wide transition-all duration-300 group
+                       {% if request.path == '/history/' %}text-white{% else %}text-gray-400 hover:text-white{% endif %}">
+                        História
+                        <span class="absolute bottom-0 left-0 h-[2px] bg-spurs-silver transition-all duration-300 
+                        {% if request.path == '/history/' %}w-full{% else %}w-0 group-hover:w-full{% endif %}"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'arena' %}" 
+                       class="relative py-2 text-sm font-semibold tracking-wide transition-all duration-300 group
+                       {% if request.path == '/arena/' %}text-white{% else %}text-gray-400 hover:text-white{% endif %}">
+                        Arena
+                        <span class="absolute bottom-0 left-0 h-[2px] bg-spurs-silver transition-all duration-300 
+                        {% if request.path == '/arena/' %}w-full{% else %}w-0 group-hover:w-full{% endif %}"></span>
+                    </a>
+                </li>
+                
+                <!-- Bloco de Autenticação Premium -->
+                {% if user.is_authenticated %}
+                    <li class="flex items-center gap-4 border-l border-white/10 pl-6 ml-2">
+                        <!-- Card do perfil compactado -->
+                        <div class="flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-gray-700 to-spurs-silver flex items-center justify-center font-bold text-black border border-white/20 select-none">
+                                {{ user.username|slice:":1"|upper }}
+                            </div>
+                            <div class="text-left hidden lg:block">
+                                <span class="block text-[10px] text-gray-500 uppercase tracking-wider font-semibold">Conta</span>
+                                <span class="block text-xs text-white font-bold max-w-[100px] truncate" title="{{ user.username }}">{{ user.username }}</span>
+                            </div>
+                        </div>
+
+                        <!-- Badge e Acesso Admin -->
+                        {% if user.is_staff %}
+                            <a href="/admin/" 
+                               id="btn-admin" 
+                               title="Ir para o Painel Admin"
+                               class="flex items-center gap-1.5 bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-400 hover:to-yellow-500 text-black text-xs font-bold px-3 py-2 rounded-lg transition-all duration-300 shadow-md shadow-yellow-500/10 hover:shadow-yellow-500/20 active:scale-95">
+                                <i class="fas fa-cog animate-spin-slow"></i>
+                                <span>Admin</span>
+                            </a>
+                        {% endif %}
+
+                        <!-- Formulário de Logout -->
+                        <form method="post" action="{% url 'logout' %}" class="m-0">
+                            {% csrf_token %}
+                            <button type="submit" 
+                                    id="btn-logout" 
+                                    class="border border-white/10 hover:border-white/20 bg-white/5 hover:bg-white text-white hover:text-black text-xs font-bold px-4 py-2 rounded-lg transition-all duration-300 active:scale-95">
+                                <i class="fas fa-sign-out-alt mr-1"></i>Sair
+                            </button>
+                        </form>
+                    </li>
+                {% else %}
+                    <!-- Botão Entrar Metálico para não-autenticados -->
+                    <li class="border-l border-white/10 pl-6 ml-2">
+                        <a href="{% url 'login' %}" 
+                           id="btn-login" 
+                           class="relative inline-flex items-center gap-2 bg-white text-black hover:bg-spurs-silver text-xs font-bold px-5 py-2.5 rounded-lg transition-all duration-300 shadow-md shadow-white/5 hover:shadow-white/15 active:scale-95">
+                            <i class="fas fa-sign-in-alt"></i>
+                            <span>Entrar</span>
+                        </a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+        
+        <!-- Menu Mobile com efeito de Accordion/Drawer e blur -->
+        <div id="mobile-menu" class="hidden md:hidden overflow-hidden border-t border-white/5 transition-all duration-300 ease-in-out">
+            <ul class="flex flex-col gap-3 py-5">
+                <li>
+                    <a href="{% url 'home' %}" class="flex items-center gap-3 px-4 py-3 rounded-xl {% if request.path == '/' %}bg-white/5 text-white font-bold{% else %}text-gray-400 hover:text-white hover:bg-white/5{% endif %} transition-all">
+                        <i class="fas fa-home w-5 text-center"></i> Início
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'roster' %}" class="flex items-center gap-3 px-4 py-3 rounded-xl {% if request.path == '/roster/' %}bg-white/5 text-white font-bold{% else %}text-gray-400 hover:text-white hover:bg-white/5{% endif %} transition-all">
+                        <i class="fas fa-users w-5 text-center"></i> Elenco
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'history' %}" class="flex items-center gap-3 px-4 py-3 rounded-xl {% if request.path == '/history/' %}bg-white/5 text-white font-bold{% else %}text-gray-400 hover:text-white hover:bg-white/5{% endif %} transition-all">
+                        <i class="fas fa-history w-5 text-center"></i> História
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'arena' %}" class="flex items-center gap-3 px-4 py-3 rounded-xl {% if request.path == '/arena/' %}bg-white/5 text-white font-bold{% else %}text-gray-400 hover:text-white hover:bg-white/5{% endif %} transition-all">
+                        <i class="fas fa-basketball-ball w-5 text-center"></i> Arena
+                    </a>
+                </li>
+                
+                <!-- Autenticação Mobile -->
+                {% if user.is_authenticated %}
+                <li class="mt-4 pt-4 border-t border-white/10 px-4">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-gray-700 to-spurs-silver flex items-center justify-center font-bold text-black border border-white/20">
+                            {{ user.username|slice:":1"|upper }}
+                        </div>
+                        <div>
+                            <span class="block text-[10px] text-gray-500 uppercase tracking-wider font-semibold">Logado como</span>
+                            <span class="block text-sm text-white font-bold truncate max-w-[180px]">{{ user.username }}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col gap-2">
+                        {% if user.is_staff %}
+                        <a href="/admin/" 
+                           id="btn-admin-mobile" 
+                           class="flex items-center justify-center gap-2 bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-400 hover:to-yellow-500 text-black text-sm font-bold py-3 rounded-xl transition-all shadow-md">
+                            <i class="fas fa-cog"></i>
+                            <span>Painel Admin</span>
+                        </a>
+                        {% endif %}
+                        
+                        <form method="post" action="{% url 'logout' %}" class="w-full">
+                            {% csrf_token %}
+                            <button type="submit" class="flex items-center justify-center gap-2 w-full border border-white/10 hover:bg-white/5 text-red-400 hover:text-red-300 text-sm font-bold py-3 rounded-xl transition-all">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span>Sair da Conta</span>
+                            </button>
+                        </form>
+                    </div>
+                </li>
+                {% else %}
+                <li class="mt-4 pt-4 border-t border-white/10 px-2">
+                    <a href="{% url 'login' %}" 
+                       class="flex items-center justify-center gap-2 w-full bg-white text-black hover:bg-spurs-silver text-sm font-bold py-3.5 rounded-xl transition-all">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span>Entrar na Conta</span>
+                    </a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<style>
+    /* Rotação lenta estilosa para a engrenagem do Admin */
+    .animate-spin-slow {
+        animation: spin 6s linear infinite;
+    }
+    @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+</style>
+
+<script>
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.toggle('hidden');
+        if (isHidden) {
+            hamburgerIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+        } else {
+            hamburgerIcon.classList.add('hidden');
+            closeIcon.classList.remove('hidden');
+        }
+    });
+</script>

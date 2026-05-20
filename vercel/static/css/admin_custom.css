@@ -1,0 +1,11 @@
+/* Limitar tamanho do logo na página de login do Jazzmin */
+.login-logo img {
+    max-height: 80px !important;
+    width: auto !important;
+}
+
+/* Limitar logo na sidebar */
+.brand-image {
+    max-height: 33px !important;
+    width: auto !important;
+}
