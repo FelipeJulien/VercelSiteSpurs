@@ -3,7 +3,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "spurs_site/wsgi.py"
+      "dest": "api/index.py"
     }
   ]
 }
