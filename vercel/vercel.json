@@ -1,6 +1,12 @@
 {
   "version": 3,
-  "buildCommand": "pip install -r requirements.txt && python manage.py collectstatic --noinput",
+  "builds": [
+    {
+      "src": "api/index.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "buildCommand": "python manage.py collectstatic --noinput",
   "routes": [
     {
       "src": "/static/(.*)",
@@ -9,7 +15,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/api/index.py"
+      "dest": "api/index.py"
     }
   ]
 }
