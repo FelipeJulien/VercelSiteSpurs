@@ -1,11 +1,12 @@
 {
-  "buildCommand": "python manage.py migrate && python manage.py collectstatic --noinput && python add_players.py && python add_legends.py && python add_history_events.py && python add_player_photos.py",
-  "builds": [
-    {
-      "src": "api/index.py",
-      "use": "@vercel/python"
+  "buildCommand": "pip install -r requirements.txt && python manage.py migrate --noinput && python manage.py collectstatic --noinput",
+  "functions": {
+    "api/index.py": {
+      "runtime": "python3.12",
+      "memory": 3008,
+      "maxDuration": 30
     }
-  ],
+  },
   "routes": [
     {
       "src": "/(.*)",
@@ -13,3 +14,4 @@
     }
   ]
 }
+
