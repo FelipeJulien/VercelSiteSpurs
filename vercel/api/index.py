@@ -7,4 +7,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'spurs_site.settings')
+
 app = get_wsgi_application()
+
+# Vercel expects 'app' to be exported, which is the WSGI application

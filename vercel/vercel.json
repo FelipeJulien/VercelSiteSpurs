@@ -1,16 +1,8 @@
 {
-  "version": 3,
-  "buildCommand": "python manage.py collectstatic --noinput",
-  "builds": [
-    {
-      "src": "api/index.py",
-      "use": "@vercel/python"
-    }
-  ],
   "rewrites": [
     {
-      "source": "^/(.*)",
-      "destination": "/api/index.py"
+      "source": "/(.*)",
+      "destination": "/api"
     }
   ]
 }
