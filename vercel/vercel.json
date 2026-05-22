@@ -1,4 +1,5 @@
 {
+  "buildCommand": "python manage.py migrate && python manage.py collectstatic --noinput && python add_players.py && python add_legends.py && python add_history_events.py && python add_player_photos.py",
   "builds": [
     {
       "src": "api/index.py",
